@@ -24,9 +24,7 @@ import launches_data from "./launches_data";
 
 export default function Launch() {
   let { flight_number } = useParams();
-  console.log(typeof flight_number);
   flight_number = parseInt(flight_number);
-  console.log(typeof flight_number);
   // const { loading, error, data } = useQuery(LAUNCH_QUERY, {
   //   variables: { flight_number },
   // });
@@ -35,7 +33,6 @@ export default function Launch() {
   // console.log(data);
 
   const launch = launches_data.find((l) => {
-    console.log("@", typeof l.flight_number);
     return l.flight_number === flight_number;
   });
 

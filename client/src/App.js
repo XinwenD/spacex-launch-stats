@@ -23,7 +23,7 @@ export default class App extends Component {
           />
           <Switch>
             <Route path="/" component={Launches} exact />
-            <Route path="/launch/:flight_number" component={Launch} />
+            <Route path="/launch/:flight_number" exact component={Launch} />
           </Switch>
         </div>
       </BrowserRouter>
